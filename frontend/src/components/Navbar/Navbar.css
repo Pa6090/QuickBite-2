@@ -1,0 +1,14 @@
+.active1{
+    padding-bottom: 2px;
+    border-bottom: 2px solid black;
+}
+
+.change{
+    display: none;
+}
+
+.nav-item .log:hover .change{
+    display: block;
+    color : white;
+    font-size: 10px;
+}
