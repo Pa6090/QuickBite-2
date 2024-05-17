@@ -6,7 +6,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartitems] = useState({});
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([])
-    const backendUrl = 'http://localhost:3000'
+    const backendUrl = 'https://quickbite-2.onrender.com'
 
     const addToCart = (itemId) => {
         if(!cartItems[itemId]){
