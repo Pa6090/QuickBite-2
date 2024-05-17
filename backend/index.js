@@ -14,15 +14,20 @@ app.get('/',(req, res)=>{
 })
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+            origin : ["https://quickbite-e26u.onrender.com/"],
+            methods : ["POST", "GET"],
+            credentials : true
+        })
+)
 
-app.use((req,res,next)=>{
-    res.setHeader("Access-Control-Allow-Origin","http://localhost:5173");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-})
+// app.use((req,res,next)=>{
+//     res.setHeader("Access-Control-Allow-Origin","http://localhost:5173");
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// })
 
 connectdb();
 
